@@ -25,7 +25,7 @@ export const authOptions: NextAuthOptions = {
       const encodedData = {
         name: token?.name,
         email: token?.email,
-        role: token.role,
+        role: token?.role,
         iat: Date.now() / 1000,
         exp: Math.floor(Date.now() / 1000) + 30 * 24 * 60 * 60,
       };
